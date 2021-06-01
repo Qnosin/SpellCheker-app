@@ -1,0 +1,66 @@
+@mixin d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    @include d-flex();
+}
+
+.container {
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    @include d-flex();
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: aliceblue;
+    position: relative;
+    .main-Text {
+        font-size: 1.1rem;
+        @include d-flex();
+        h1 {
+            margin-bottom: 2rem;
+        }
+    }
+    .user-text {
+        width: 200px;
+        height: 5vh;
+        font-size: 1.3rem;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .Genereted-Text {
+        font-size: 1.2rem;
+        z-index: 0;
+    }
+    .new-Word {
+        width: 25px;
+        height: 25px;
+        background: url('/img/rotating-arrow-symbol.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        width: 50%;
+    }
+    .container .Genereted-Text {
+        font-size: 1.5rem;
+    }
+}
