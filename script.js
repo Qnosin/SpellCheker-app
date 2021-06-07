@@ -22,7 +22,7 @@ class SpellCheker {
         const playerText = document.querySelector('.user-text').value;
         for (let y = 0; y <= originalText.length; y++) {
             if (playerText[y] == undefined) {
-                this.x.children[y].style.color = 'black';
+                this.x.children[y].style.color = 'white';
             } else if (originalText[y] === playerText[y]) {
                 this.x.children[y].style.color = 'green';
             } else if (originalText[y] !== playerText[y]) {

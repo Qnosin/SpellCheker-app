@@ -1,3 +1,4 @@
+$first-color: #fff;
 @mixin d-flex {
     display: flex;
     justify-content: center;
@@ -9,14 +10,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 body {
     background-color: black;
     height: 100vh;
     @include d-flex();
-    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -26,13 +27,14 @@ body {
     @include d-flex();
     justify-content: space-evenly;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: #B7B34F;
     position: relative;
     .main-Text {
         font-size: 1.1rem;
         @include d-flex();
         h1 {
             margin-bottom: 2rem;
+            color: $first-color;
         }
     }
     .user-text {
@@ -41,10 +43,13 @@ body {
         font-size: 1.3rem;
         text-align: center;
         border-radius: 5px;
+        border-color: $first-color;
+        background-color: $first-color;
     }
     .Genereted-Text {
         font-size: 1.2rem;
         z-index: 0;
+        color: $first-color;
     }
     .new-Word {
         width: 25px;
